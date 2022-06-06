@@ -2,8 +2,8 @@ exports.translate = function(word) {
     let vowels = ['a', 'e', 'i', 'o', 'u']
     pigLatin = []
 
-    splitWords = word.split(' ');
-    count = 0
+    let splitWords = word.split(' ');
+    let count = 0
     for(i=0; i<splitWords.length; i++) {
         for(j=0; j<splitWords[i].length; j++) {
             if(vowels.includes(splitWords[i][j]) == false) {
@@ -19,7 +19,7 @@ exports.translate = function(word) {
             }
         }
         
-        temp = splitWords[i].substring(count) + 'ay'
+        let temp = splitWords[i].substring(count) + 'ay'
         pigLatin.push(temp)
         count = 0
     }
